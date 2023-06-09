@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Asma",
+    "number": "1234",
+    "address": "Berlin 5"
+  },
+  {
+    "name": "Anton",
+    "number": "6789",
+    "address": "Torstrasse 5"
+  },
+  {
+    "name": "Nick",
+    "number": "999",
+    "address": "Neukoln 777"
+  }
+]

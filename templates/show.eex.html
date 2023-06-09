@@ -1,0 +1,8 @@
+<h3>Name: <%= name %></h3>
+<h3>Number:<%= number %></h3>
+<h3>Address: <%= address %></h3>
+<a href="/contacts"> Back</a><br />
+<a href="/contacts/<%= name %>/edit"> Edit Contact</a><br />
+<form action="/contacts/<%= name %>/delete" method="post">
+  <button type="submit">Delete</button>
+</form>

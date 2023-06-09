@@ -1,0 +1,32 @@
+<h2><%= title %></h2>
+<form action="<%= action %>" method="get">
+  <label for="search">Search:</label><br />
+  <input type="text" id="search" name="search" value="" /><br />
+</form>
+<a href="/contacts/new"> Add a new contact</a>
+
+<table style="width: 100%">
+  <tr>
+    <th><%= subtitle1 %></th>
+    <th><%= subtitle2 %></th>
+    <th><%= subtitle3 %></th>
+    <th><%= subtitle4 %></th>
+  </tr>
+
+  <%= for contact <- contacts do %>
+  <tr>
+    <td>
+      <a href='/contacts/<%= contact["name"] %>'><%= contact["name"] %> </a>
+    </td>
+    <td><%= contact["number"] %></td>
+    <td><%= contact["address"] %></td>
+    <td>
+      <a href='/contacts/<%= contact["name"] %>'>Show</a>
+      <a href='/contacts/<%= contact["name"] %>/edit'>Edit</a>
+      <form action="<%= action %>/<%= contact["name"] %>/delete" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </td>
+  </tr>
+  <% end %>
+</table>

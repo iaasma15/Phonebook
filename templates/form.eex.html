@@ -1,0 +1,16 @@
+<h2><%= title %></h2>
+<form action="<%= action %>" method="post">
+  <label for="name">Name:</label><br />
+  <%= if disabled do %>
+  <input type="text" id="name" name="name" value="<%= name %>" disabled />
+  <% else %>
+  <input type="text" id="name" name="name" value="<%= name %>" /> <br />
+  <% end %>
+  <br />
+  <label for="number">Number:</label><br />
+  <input type="text" id="number" name="number" value="<%= number %>" /><br />
+  <label for="address">Address:</label><br />
+  <input type="text" id="address" name="address" value="<%= address %>" /><br />
+  <input type="submit" value="Submit" />
+</form>
+<a href="/contacts"> Back</a>
